@@ -58,7 +58,7 @@ func (s *Store) Authenticate(id, password string) (bool, error) {
 
 // Get retrieves the current password hash for the user given.
 func (s *Store) Get(id string) (hash []byte, err error) {
-	csql.Safe(&err)
+	defer csql.Safe(&err)
 
 	r := s.QueryRow(`
 		SELECT hash FROM `+SqlTableName+` WHERE id = $1
