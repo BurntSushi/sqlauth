@@ -15,7 +15,7 @@ var (
 	CREATE TABLE IF NOT EXISTS ` + SqlTableName + ` (
 		id TEXT NOT NULL,
 		hash BYTEA NOT NULL,
-		PRIMARY KEY (id, name, key)
+		PRIMARY KEY (id, hash)
 	)
 	`
 )
