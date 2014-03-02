@@ -12,7 +12,7 @@ import (
 var (
 	SqlTableName      = "auth_password"
 	SqlCreatePassword = `
-	CREATE TABLE ` + SqlTableName + ` IF NOT EXISTS (
+	CREATE TABLE IF NOT EXISTS ` + SqlTableName + ` (
 		id TEXT NOT NULL,
 		hash BYTEA NOT NULL,
 		PRIMARY KEY (id, name, key)
