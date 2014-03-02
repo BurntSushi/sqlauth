@@ -1,3 +1,8 @@
+sqlauth is a simple package for managing user authentication that is backed by 
+a database. Emphatically, this package does not handle login forms or 
+redirections. It only exposes a few functions for managing user passwords and 
+authenticating a user's password.
+
 ### Installation
 
     go get github.com/BurntSushi/sqlauth
